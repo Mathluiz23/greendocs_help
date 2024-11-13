@@ -1,4 +1,4 @@
-// script para um campo data não poder ser preenchido com uma data
+// script para um campo data não poder ser preenchido com uma data anterior a data atual
 
 if(item.Type === 'APA'){ // Apenas exemplo para filtrar o tipo de item
 
