@@ -28,4 +28,3 @@ if(item.Type == 'Item') {
         log(item.Fields.Budget_Creator);
     }
 }
-}

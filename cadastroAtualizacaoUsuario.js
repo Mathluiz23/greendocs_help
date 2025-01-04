@@ -3,7 +3,7 @@ function atualizarCadastro(item) {
     let client          = GlobalServerURL;
     let endPoint        = "/api/v2/groups"; // Endpoint para criar grupos 
     let username        = "job@greendocs.net";
-    let password        = "Hydro@2023";
+    let password        = "";
     let auth            = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
     let url             = client + endPoint;
     let authorization   = "Basic " + auth;
