@@ -1,6 +1,6 @@
 function Matriz_Resp_PO(item) {
     var username = "api@greendocs.net";
-    var password = "uGMguhRZWBakNpBrEKP";
+    var password = "";
     var encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
     var servidor = "https://abl02.greendocs.net";
     var ambiente = 47;

@@ -3,7 +3,7 @@ function CriaUsuario(item) {
     //PROCESSO: FORNECEDOR
         
     var username = "api@greendocs.net";
-    var password = "Mt8*Ar!h$5v.3b";
+    var password = "";
     var encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
     var enderecoCriar = "http://cattalini2.newhom.greendocs.net/api/v2/users";
  
@@ -24,14 +24,14 @@ function CriaUsuario(item) {
         }else{
             objetoCriar.Ativo = true;
             //objetoCriar.EmailNotificacao = email;
-            objetoCriar.Pass = "$Fornec&dorC@tt@l1n1";
+            objetoCriar.Pass = "";
             objetoCriar.TrocaSenha = true;
             objetoCriar.Grupos = [item.Fields.Fornecedor_contrato, ' CADFORN - Fornecedores'];
             TabelaRepresentantes.Rows[i].Columns['Usuario_Fornecedor'] = nome;
         }
         
         /*objetoCriar.EmailNotificacao = email;
-        objetoCriar.Pass = "Greendocs@Cattalini";
+        objetoCriar.Pass = "";
         objetoCriar.TrocaSenha = true;
         objetoCriar.Grupos = [item.Fields.Fornecedor_contrato, 'Fornecedores'];
         log("Nome: " + nome + ". Email: " + email);*/
