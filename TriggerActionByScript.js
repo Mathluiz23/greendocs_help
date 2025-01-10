@@ -1,5 +1,4 @@
 if (item.Type === "TEP") { 
-    
     // Criação de um objeto `param` contendo os parâmetros necessários para compor a URL.
     let param = {
         NomeDocumento: "NomeDocumento=" + item.Name, // Inclui o nome do documento a partir do item.Name.
@@ -28,8 +27,8 @@ if (item.Type === "TEP") {
     let contentType = "application/json";
     // Faz a chamada ao serviço web utilizando a função `callWebService`.
     // Os parâmetros são: URL, cabeçalho de autorização, método HTTP, tipo de conteúdo, corpo da requisição (vazio), e um array vazio para headers adicionais.
-    let request = callWebService(url, authorization, method, contentType, "", []);
-    // Logs comentados que poderiam ser usados para depuração:
+    callWebService(url, authorization, method, contentType, "", []);
+  
     // log('1 '+request); // Loga a resposta da requisição como uma string.
     // log('2 '+JSON.parse(request)); // Loga a resposta da requisição como um objeto JSON (caso o retorno seja um JSON).
  }
