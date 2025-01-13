@@ -28,3 +28,21 @@ if(item.Type == 'Item') {
         log(item.Fields.Budget_Creator);
     }
 }
+
+
+// funcao otimizada - testar 
+
+if (item.Type == 'Item') {
+    var group = getGroupByID(19993);
+    var userId = User.ID;
+    var userIsInGroup = false;
+
+    for (var i = 0; i < group.Users.length; i++) {
+        if (userId == group.Users[i].ID) {
+            userIsInGroup = true;
+            break;
+        }
+    }
+    item.Fields.Budget_Creator = userIsInGroup ? 'Order Handling' : 'EGP';
+    log(item.Fields.Budget_Creator);
+}
