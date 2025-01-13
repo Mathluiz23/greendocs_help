@@ -8,7 +8,7 @@ if (item.Type === "TEP") {
 
     // Credenciais de autenticação.
     var username = "service_api@greendocs.com";
-    var password = "n%s{p#&!H7sZ{Tr-,B-R";
+    // var password = "";
 
     // Criação do cabeçalho de autenticação em Base64.
     var auth = System.Convert.ToBase64String(
