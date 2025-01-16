@@ -1,0 +1,1 @@
+var idFieldValue = getFieldValueID(item, nomeInterno);
