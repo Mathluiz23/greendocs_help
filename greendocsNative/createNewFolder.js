@@ -1,0 +1,1 @@
+var idPasta = newFolder(idPastaPai, nomePasta, siglaPasta = null);
