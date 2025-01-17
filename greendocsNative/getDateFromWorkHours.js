@@ -1,0 +1,1 @@
+getDateFromWorkHours(new Date(), 40);
