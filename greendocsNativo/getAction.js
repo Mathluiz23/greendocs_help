@@ -1,2 +1,2 @@
-if (action.InternalName=='nome interno do botão'){
+if (action.InternalName =='nome interno do botão'){
 }
