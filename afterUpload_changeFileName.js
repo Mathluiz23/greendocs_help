@@ -1,48 +1,48 @@
 function Item_AfterUpload(item, file) {
-    
-    if (item.Type == "DOC"){
-        
-        
-        // log('Para informação' + item.Fields.Para_Informacao)
-        // log('Revisão Cliente' + item.Fields.Revisao_Cliente)
-        
-        let paraInformacao = item.Fields.Para_Informacao;
-        let revisaodoCliente = item.Fields.Revisao_Cliente;
-        // log(revisaodoCliente.length + 'revisaoDoclienteLentgh')
-        let client = item.Fields.Numero_Documento_Cliente;
-        
-        if(paraInformacao == 'No'){
-             let tamanho = revisaodoCliente.length;
-             if(tamanho == 5){
-                let nomeAlterado = revisaodoCliente.slice(0,-1)
-                // item.Fields.Revisao_Cliente = nomeAlterado;
-                log(nomeAlterado)
+    // Verifica se o tipo do item é "DOC"
+    if (item.Type == "DOC") {
+        // Recupera os campos do item
+        let paraInformacao = item.Fields.Para_Informacao; // Campo que indica se o documento é "Para Informação"
+        let revisaodoCliente = item.Fields.Revisao_Cliente; // Campo de revisão do cliente
+        let client = item.Fields.Numero_Documento_Cliente; // Número do documento do cliente
+
+        // Caso o campo "Para Informação" seja "No" (não é apenas para informação)
+        if (paraInformacao == 'No') {
+            // Calcula o tamanho da string de revisão do cliente
+            let tamanho = revisaodoCliente.length;
+
+            // Verifica se a string tem exatamente 5 caracteres
+            if (tamanho == 5) {
+                // Remove o último caractere da string de revisão
+                let nomeAlterado = revisaodoCliente.slice(0, -1); 
+                log(nomeAlterado); // Exibe a revisão alterada no log
+
+                // Cria um novo nome para o arquivo no formato "Número do Documento do Cliente - Revisão Alterada"
                 let newName = client + "-" + nomeAlterado;
-                log("Novo" + newName);
+                log("Novo" + newName); // Exibe o novo nome no log
+
+                // Altera o nome do arquivo enviado para o novo nome
                 file.Name = newName;
-             }
-            
-            
+            }
         }
-        
-        
-        // função abaixo ok    
-        if(paraInformacao == 'Si'){
-            log("Antigo "+file.Name);
-            
-            log(item.fields.Revisao_Cliente)
-            log  (item.Fields.Numero_Documento_Cliente)
-            
-            
+
+        // Caso o campo "Para Informação" seja "Si" (é para informação)
+        if (paraInformacao == 'Si') {
+            log("Antigo " + file.Name); // Exibe o nome antigo do arquivo
+
+            log(item.fields.Revisao_Cliente); // Exibe a revisão do cliente
+            log(item.Fields.Numero_Documento_Cliente); // Exibe o número do documento do cliente
+
+            // Recupera os valores do número do documento do cliente e da revisão
             let client = item.Fields.Numero_Documento_Cliente;
             let revision = item.Fields.Revisao_Cliente;
-            
-            
+
+            // Cria um novo nome para o arquivo no formato "Número do Documento do Cliente - Revisão"
             let newName = client + "-" + revision;
-            log("Novo "+newName);
-            file.Name = newName;  //Altera o nome do upload para o "numero documento do cliente" e "revisão"
-            
+            log("Novo " + newName); // Exibe o novo nome no log
+
+            // Altera o nome do arquivo enviado para o novo nome
+            file.Name = newName;
         }
-            
     }
 }
