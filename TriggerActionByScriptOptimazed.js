@@ -2,7 +2,7 @@
 if (item.Type === "TEP") {
     
     // Construção da URL diretamente com os parâmetros necessários
-    var url = "https://siderperu.greendocs.net/api/v2/workflows?" +
+    var url = "" +
         "NomeDocumento=" + item.Name + // Nome do documento é extraído do item
         "&TipoItem=13" +              // Define o tipo do item como 13
         "&Usuario=" + User.Login +    // Adiciona o login do usuário
