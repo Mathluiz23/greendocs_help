@@ -10,5 +10,4 @@ const isInViewport = (element) => {
   
   // Exemplo de uso
   const elemento = document.querySelector("#meuElemento");
-  console.log(isInViewport(elemento)); // true ou false
-  
+  console.log(isInViewport(elemento));
