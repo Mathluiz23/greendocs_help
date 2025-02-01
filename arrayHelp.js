@@ -35,3 +35,5 @@ ecma3Arr.shift();
 ecma3Arr.unshift(5);
 let ecma3Sorted = ecma3Arr.sort();
 let ecma3Reversed = ecma3Arr.reverse();
+
+// Métodos compatíveis com ECMAScript 5
