@@ -14,3 +14,17 @@ function Item_AfterEditFields(item) {
        item.Fields.Descricao_da_Nao_Conformidade_Memo_template = textoFormatado;
     }
 }
+
+// Teste da função
+function simulateTest() {
+    var item = {
+        Type: 'NC e IC',
+        Fields: {
+            Descricao_da_Nao_Conformidade: '<p>Esta é uma descrição de teste.<br>Esta é a segunda linha.</p>'
+        }
+    };
+
+    Item_AfterEditFields(item);
+
+    console.log("Descricao_da_Nao_Conformidade_Memo_template:", item.Fields.Descricao_da_Nao_Conformidade_Memo_template);
+}
