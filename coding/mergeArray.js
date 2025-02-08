@@ -5,3 +5,11 @@ function mergeArrays(arr1, arr2) {
 // Testes
 console.log(mergeArrays([1, 2, 3], [3, 4, 5])); // [1, 2, 3, 4, 5]
 console.log(mergeArrays([10, 20], [20, 30, 40])); // [10, 20, 30, 40]
+
+
+// merge arrays
+// Write a function that merges two arrays and removes duplicates.
+
+// Example
+
+// mergeArrays([1, 2, 3], [3, 4, 5]); // [1, 2, 3, 4, 5]
