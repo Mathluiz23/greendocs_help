@@ -1,1 +1,0 @@
-setWatermark(description, string horizontalAlignment = "", string verticalAlignment = "", int height = 0, int width = 0, double rotateAngle = 0);
