@@ -19,3 +19,11 @@ var matrizGUT = [
     var item = matrizGUT[i];
     console.log(item.descricao + ": Prioridade = " + item.prioridade);
  }
+
+   // classificar os problemas por prioridade
+   function classificarProblemas(matriz) {
+      matriz.sort(function(a, b) {
+         return b.prioridade - a.prioridade;
+      });
+      return matriz;
+   }
