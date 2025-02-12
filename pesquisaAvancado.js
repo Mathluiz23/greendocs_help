@@ -11,6 +11,7 @@
 //   ...
 // ]
 
+
 // **Parâmetros para 'Op' (Operação):**
 // 0 - igual a
 // 1 - contém
