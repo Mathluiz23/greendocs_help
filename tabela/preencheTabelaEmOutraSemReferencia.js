@@ -16,13 +16,13 @@ function Item_OnClickWorkflowAction(item) {
             "CHECKLIST-SAFETY": "Checklist_Process_Safety"
         };
         
-        var stringDeBusca = "[{'Nome_interno': 'TIPO_ITEM','Op': 0, 'Valor':'Checklist','Tipo': 0}]";
-        var itemsSearched = searchItems(item, stringDeBusca);
-        log(itemsSearched.length);
+        var stringDeBusca = "[{'Nome_interno': 'TIPO_ITEM','Op': 0, 'Valor':'MOC','Tipo': 0}]";
+        var MOC_itemsSearched_MOC = searchItems(item, stringDeBusca);
+        log(MOC_itemsSearched_MOC.length);
         
-        for (var i = 0; i < itemsSearched.length; i++) {
-            var tabela_checklist = itemsSearched[i].Fields.Checklist;
-            var checklistName = itemsSearched[i].Name;
+        for (var i = 0; i < MOC_itemsSearched_MOC.length; i++) {
+            var tabela_checklist = MOC_itemsSearched_MOC[i].Fields.Checklist;
+            var checklistName = MOC_itemsSearched_MOC[i].Name;
             
             if (tabela_checklist && tabela_checklist.Rows && tabela_checklist.Rows.length > 0) {
                 if (checklists.hasOwnProperty(checklistName)) {

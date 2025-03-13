@@ -1,6 +1,6 @@
 function compararDatas(data1, data2) {
     var partesData1 = data1.split("-");
-    var partesData2 = data2.split("-");
+    var novaData = new Date();
 
     
     var numData1 = parseInt(partesData1[0] + partesData1[1] + partesData1[2], 10);
