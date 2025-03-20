@@ -14,9 +14,9 @@
     
         // Capturar o avanço realizado no filho
         var avancoRealizadoMap = {}; // Mapeia o avanço realizado
-        for (var i = 0; i < tabelaRDO.Rows.length; i++) {
-            var rowFilho = tabelaRDO.Rows[i].Columns;
-            var marcoFilho = rowFilho["Marco_marcos_obra"];
+        
+        
+        
             var avancoRealizado = rowFilho["Avanco_Realizado_"];
     
             if (marcoFilho && avancoRealizado) {

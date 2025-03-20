@@ -1,6 +1,9 @@
-valor = "R0AAA"
+let valor = "R0A";
 
-valor.slice(0, 2) // R0
-valor.slice(0,-3)
+valor = valor.slice(0, -1);
 
-console.log(valor)
+console.log(valor);  
+
+
+if (DAR === TA && TA <= 30) {
+    console.log("Expired");

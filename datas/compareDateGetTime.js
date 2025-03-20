@@ -1,11 +1,18 @@
 function compararDatas(data1, data2) {
  
-    var date1 = new Date(data1);
+    var dataGreendocs = item.Fields.__________;
+
+    var day = parseInt(prazo.substring(0, 2), 10);
+    var month = parseInt(prazo.substring(3, 5), 10) - 1;
+    var year = parseInt(prazo.substring(6, 10), 10);
+
+    var inputDate = new Date(year, month, day);
+
     var date2 = new Date(data2);
 
-    if (date1.getTime() < date2.getTime()) {
+    if (inputDate.getTime() < date2.getTime()) {
         return "A data 1 é anterior à data 2.";
-    } else if (date1.getTime() > date2.getTime()) {
+    } else if (inputDate.getTime() > date2.getTime()) {
         return "A data 1 é posterior à data 2.";
     } else {
         return "As duas datas são iguais.";
