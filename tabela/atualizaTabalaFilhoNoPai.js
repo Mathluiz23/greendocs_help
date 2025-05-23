@@ -25,6 +25,9 @@
         }
     
         // Atualização na tabela do item pai (Contrato)
+
+        var itemsReferenced = searchReferencedItems(item, "CONTRATO > DIÁRIO DE OBRA", 2);
+        
         for (var j = 0; j < itemsReferenced.length; j++) {
             if (itemsReferenced[j].Type == "CP") {
                 log("Entrou no CP");
