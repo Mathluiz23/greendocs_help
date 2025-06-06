@@ -14,6 +14,5 @@ function mostFrequentNumber(arr) {
     return mostFrequent;
 }
 
-// Testes
 console.log(mostFrequentNumber([1, 3, 2, 3, 4, 3, 2, 2, 2])); // 2
 console.log(mostFrequentNumber([10, 20, 20, 10, 10])); // 10
