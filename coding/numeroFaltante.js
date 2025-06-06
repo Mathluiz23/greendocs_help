@@ -6,9 +6,3 @@ function numeroFaltante(lista) {
 }
 
 console.log(numeroFaltante([1, 2, 4, 5, 6])); // Saída: 3
-
-
-
-
-
-
