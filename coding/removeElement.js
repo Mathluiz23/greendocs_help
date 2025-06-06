@@ -1,4 +1,3 @@
-// without splice
 
 function removeElement(arr, value) {
     return arr.filter(item => item !== value); // Filtra os elementos diferentes do valor a ser removido
