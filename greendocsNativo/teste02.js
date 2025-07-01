@@ -16,10 +16,6 @@ if (item.Fields.Type_of_Group == "Distribuition Group") {
 }
 
 var resultadoGrupo = callWebService(enderecoCriar, "Basic " + encoded, "POST", "application/json", JSON.stringify(objetoCriar), []);
-// log("Resposta da criação do grupo: " + resultadoGrupo);
-
-// log("Buscando usuários no campo item.Fields.Users...");
-// log("Quantidade de usuarios "+item.Fields.Users.length);
 
 var usuarios = searchReferencedItems(item, "Contacts", 1);
 
