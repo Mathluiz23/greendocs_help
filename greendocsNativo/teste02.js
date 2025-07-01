@@ -15,7 +15,6 @@ if (item.Fields.Type_of_Group == "Distribuition Group") {
     objetoCriar.Info = { "Category_group": "ServicesEmission" };
 }
 
-// log("Dados do grupo a ser criado: " + JSON.stringify(objetoCriar));
 var resultadoGrupo = callWebService(enderecoCriar, "Basic " + encoded, "POST", "application/json", JSON.stringify(objetoCriar), []);
 // log("Resposta da criação do grupo: " + resultadoGrupo);
 
