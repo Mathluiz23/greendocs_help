@@ -42,4 +42,3 @@ if (usuarios.length > 0) {
     log("Nenhum usuário encontrado ");
 }
 
-
